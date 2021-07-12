@@ -1,0 +1,185 @@
+
+<body>
+<div class="row" *ngIf="checkView('default')">
+    <div class="column">
+        <div>
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Create event</mat-card-title>
+                    <mat-card-subtitle>Create new event</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="assets/images (1).jpg">
+                <mat-card-actions>
+                    <button mat-button (click)="onSubmit('Create')">Create</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="column">
+        <div>
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Delete event</mat-card-title>
+                    <mat-card-subtitle>Delete created event</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="assets/images (3).jpg" >
+                <mat-card-actions>
+                    <button mat-button (click)="onSubmit('Delete')">Delete</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+
+
+    <div class="column">
+        <div>
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Publish </mat-card-title>
+                    <mat-card-subtitle>Publish created event</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="assets/blackboard.jpeg">
+                <mat-card-actions>
+                    <button mat-button (click)="onSubmit('Publish')">Publish</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="column">
+        <div>
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Report</mat-card-title>
+                    <mat-card-subtitle>Report event</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="assets/winner.jpeg">
+                <mat-card-actions>
+                    <button mat-button (click)="onSubmit('Report')">Report</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="column">
+        <div>
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Invite</mat-card-title>
+                    <mat-card-subtitle>Invite participants</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="assets/opinions.jpeg">
+                <mat-card-actions>
+                    <button mat-button (click)="onSubmit('Invite')">Invite</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+    <div *ngIf="checkView('Create')">
+        <!-- <div class="container col-4">
+            <h2>ADD EVENT</h2>
+            <form >
+              <div class="form-group" novalidate>
+                <label for="eventName">Event Name</label>
+                <input type="eventName" class="form-control" formControlName="eventName" placeholder="eventName">
+              </div>
+          
+              <div class="form-group">
+                <label for="eventDescription">Event description</label>
+                <input type="eventDescription" class="form-control" formControlName="eventDescription" placeholder="eventDescription">
+              </div>
+          
+              <button type="submit" class="btn btn-primary" (click)="onAdd()">Submit</button>
+            </form>
+          </div> -->
+          <div class="testbox">
+            <form action="/">
+              <div class="banner">
+                <h1>Create New Event <i class="fa fa-home"></i></h1>
+              </div>
+              <p>Event Information</p>
+              <div class="item">
+                <label for="name">Event Title<span>*</span></label>
+                <input id="name" type="text" name="name" required/>
+              </div>
+              <div class="item">
+                <label for="name">Event Description<span>*</span></label>
+                <input id="name" type="text" name="name" required/>
+              </div>
+              <div class="item">
+                <label for="address">Location<span>*</span></label>
+                <input id="address" type="address" name="address" required/>
+              </div>
+              <div class="item">
+                <label for="edate">Date of Event<span>*</span></label>
+                <input id="edate" type="date" name="edate" required/>
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="question">
+                <label>Place for event</label>
+                <div class="question-answer">
+                  <div>
+                    <input type="radio" value="none" id="radio_1" name="gender"/>
+                    <label for="radio_1" class="radio"><span>Indoor</span></label>
+                  </div>
+                  <div>
+                    <input  type="radio" value="none" id="radio_2" name="gender"/>
+                    <label for="radio_2" class="radio"><span>Outdoor</span></label>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <p>Paricipants Allowed</p>
+                <select>
+                  <option selected value="" disabled selected></option>
+                  <option value="course-type" >Upto 50</option>
+                  <option value="short-courses">Upto 100</option>
+                  <option value="featured-courses">Upto 500</option>
+                  <option value="undergraduate">Upto 1000</option>
+                </select>
+              </div>
+              <!-- <div class="question">
+                <label>Choose Race</label>
+                <div class="question-answer">
+                  <div>
+                    <input type="radio" value="none" id="radio_3" name="race"/>
+                    <label for="radio_3" class="radio"><span>5k - $25</span></label>
+                  </div>
+                  <div>
+                    <input  type="radio" value="none" id="radio_4" name="race"/>
+                    <label for="radio_4" class="radio"><span>10K - $25</span></label>
+                  </div>
+                </div>
+              </div> -->
+              <div class="btn-block">
+                <button style='margin-right:16px' type="submit" href="/">Submit </button>
+                
+                <button type="reset" (click)="cancel()">Cancel</button>
+              </div>
+            </form>
+          </div>
+         
+    </div>
+    <div *ngIf="checkView('Delete')"> 
+        <button type="reset" (click)="cancel()">Cancel</button>
+    </div>
+    <div *ngIf="checkView('Publish')">
+        <button type="reset" (click)="cancel()">Cancel</button>
+    </div>
+    <div *ngIf="checkView('Report')">
+        <button type="reset" (click)="cancel()">Cancel</button>
+    </div>
+    <div *ngIf="checkView('Invite')">
+        <button type="reset" (click)="cancel()">Cancel</button>
+    </div>
+
+</body>
